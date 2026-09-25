@@ -54,9 +54,9 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 gap-10 items-center">
           {/* Left Column: Direct Contact Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
+          <div className="lg:col-span-5 flex flex-col gap-4 ">
             <h3 className="text-xl font-bold text-neutral-100 mb-2">
               Contact Details
             </h3>
@@ -111,93 +111,7 @@ export default function ContactSection() {
               </div>
             </a>
           </div>
-
-          {/* Right Column: Direct Message Form */}
-          <div className="lg:col-span-7 p-7 sm:p-8 rounded-2xl border border-white/10 bg-[#0e0e13]/70 backdrop-blur-md">
-            <h3 className="text-xl font-bold text-neutral-100 mb-6">
-              Send a Message
-            </h3>
-
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div>
-                <label htmlFor="name" className="block text-xs font-medium text-neutral-300 mb-2">
-                  Your Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  required
-                  placeholder="Karan Sai"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-900/60 border border-white/10 text-neutral-100 placeholder:text-neutral-500 text-sm focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/50 transition-all"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-xs font-medium text-neutral-300 mb-2">
-                  Your Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder="name@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-900/60 border border-white/10 text-neutral-100 placeholder:text-neutral-500 text-sm focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/50 transition-all"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-xs font-medium text-neutral-300 mb-2">
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={4}
-                  placeholder="Hi Karan, let's discuss a project..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-900/60 border border-white/10 text-neutral-100 placeholder:text-neutral-500 text-sm focus:outline-none focus:border-purple-500/60 focus:ring-1 focus:ring-purple-500/50 transition-all resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-[0_0_20px_rgba(147,51,234,0.4)] hover:shadow-[0_0_25px_rgba(147,51,234,0.6)] active:scale-[0.99]"
-              >
-                {isSent ? (
-                  <>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                    <span>Opening Mail Client...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
         </div>
-
-        {/* Footer */}
-        <footer className="mt-24 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-neutral-400">
-            © {new Date().getFullYear()} Karan Sai. All rights reserved.
-          </p>
-
-          <button
-            onClick={scrollToTop}
-            className="inline-flex items-center gap-2 p-2.5 rounded-full border border-white/10 bg-neutral-900/60 text-neutral-400 hover:text-white hover:border-purple-500/40 transition-all"
-            aria-label="Scroll back to top"
-          >
-            <ArrowUp className="w-4 h-4" />
-          </button>
-        </footer>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Code, Database, Briefcase } from "lucide-react";
-import { useRouter } from "next/navigation";
+
 
 const HIGHLIGHTS = [
     {
@@ -26,7 +26,7 @@ const HIGHLIGHTS = [
 ];
 
 export default function AboutSection() {
-    const router = useRouter();
+   
     return (
         <section id="about" className="relative py-28 px-6">
             <div className="max-w-6xl mx-auto">
@@ -43,26 +43,12 @@ export default function AboutSection() {
                         </h3>
 
                         <p className="text-neutral-400 text-base leading-relaxed">
-                            With 3 years of hands-on experience, I focus on engineering responsive, production-focused applications. My background spans client work and software engineering internships, with deep practice in state management, data-intensive interfaces, and end-to-end integration.
+                            With  hands-on experience, I focus on engineering responsive, production-focused applications. My background spans client work and software engineering internships, with deep practice in state management, data-intensive interfaces, and end-to-end integration.
                         </p>
 
                         <p className="text-neutral-400 text-base leading-relaxed">
                             I have delivered applications featuring role-based access control, real-time analytics data pipelines, and reusable UI systems. I take pride in writing clean, type-safe code that bridges intuitive interfaces with reliable backend services.
                         </p>
-
-                        {/* Quick Actions */}
-                        <div className="flex flex-wrap items-center gap-4 pt-4">
-                            <a
-                                href="/contact"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    router.push("/contact");
-                                }}
-                                className="px-6 py-2.5 text-sm font-semibold rounded-full bg-purple-600 text-white hover:bg-purple-500 transition-all shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:scale-105 active:scale-95 cursor-pointer"
-                            >
-                                Get In Touch
-                            </a>
-                        </div>
                     </div>
 
                     {/* Right Column: Experience Highlights */}

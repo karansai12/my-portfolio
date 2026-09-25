@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FileText } from "lucide-react";
 import { cn } from "../lib/utils";
 
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -36,10 +37,10 @@ export default function Navbar() {
 
         {/* Resume Button */}
         <a
-          href="/resume.pdf"
+          href="https://drive.google.com/file/d/17aPZsCp9HNJbTz4YdX9tyaf5Y7ZV3RxY/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-semibold tracking-wide text-white bg-purple-600 rounded-full hover:bg-purple-500 transition-all shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_20px_rgba(147,51,234,0.6)]"
+          className="inline-flex items-center gap-2 px-4 py-2 text-xs md:text-sm font-semibold tracking-wide text-white bg-purple-600 rounded-full hover:bg-purple-500 transition-all shadow-[0_0_15px_rgba(147,51,234,0.4)] hover:shadow-[0_0_20px_rgba(147,51,234,0.6)] hover:scale-105 active:scale-95"
         >
           <FileText className="w-4 h-4" />
           <span>Resume</span>
